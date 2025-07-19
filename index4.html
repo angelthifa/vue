@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js のサンプル</title>
+    <script src="https://unpkg.com/vue@3.5.0/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>Vue3</h1>
+    <div id="app">
+      <p>{{ message }}</p>   
+    </div>
+    <script>
+      const list = ['One', 'Two', 'Three']
+      const appdata = {
+        data() {
+          return {
+            message: `<ul>
+              <li>${list[0]}</li>
+              <li>${list[1]}</li>
+              <li>${list[2]}</li>
+            </ul>`
+          }
+        }
+      }
+
+      Vue.createApp(appdata).mount('#app')
+/*
+<p>{{ count }}</p>
+      <p>{{ user.lastName }}</p>
+      <p>{{ colors[1] }}</p>
+がｄｉｖの下にあり　ｒｅｔｕｒｎに対応した表示内容が無いと表示されない
+*/
+
+
+    </script>
+  </body>
+</html>
